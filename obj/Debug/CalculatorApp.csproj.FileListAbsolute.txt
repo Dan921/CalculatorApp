@@ -1,0 +1,15 @@
+C:\Users\Kupry\source\repos\CalculatorApp\bin\Debug\CalculatorApp.exe.config
+C:\Users\Kupry\source\repos\CalculatorApp\bin\Debug\CalculatorApp.exe
+C:\Users\Kupry\source\repos\CalculatorApp\bin\Debug\CalculatorApp.pdb
+C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\CalculatorApp.csprojAssemblyReference.cache
+C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\MainWindow.g.cs
+C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\App.g.cs
+C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\CalculatorApp_MarkupCompile.cache
+C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\CalculatorApp_MarkupCompile.lref
+C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\MainWindow.baml
+C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\CalculatorApp.g.resources
+C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\CalculatorApp.Properties.Resources.resources
+C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\CalculatorApp.csproj.GenerateResource.cache
+C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\CalculatorApp.csproj.CoreCompileInputs.cache
+C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\CalculatorApp.exe
+C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\CalculatorApp.pdb
