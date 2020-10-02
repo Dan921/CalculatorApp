@@ -70,22 +70,22 @@ namespace CalculatorApp
                     }
 
                     //Корень и факториал
-                    //for (int f = 0; f < parts2.Length; f++)
-                    //{
-                    //    if (parts2[f] != "" && parts2[f][parts2[f].Length - 1] == '!' && parts2[f][0] == '√')
-                    //    {
-                    //        parts2[f] = parts2[f].Remove(parts2[f].Length - 1, 1);
-                    //        parts2[f] = parts2[f].Remove(0, 1);
-                    //        int factorial = 1;
-                    //        int num = int.Parse(parts2[f]);
-                    //        for (int k = 1; k <= num; k++)
-                    //        {
-                    //            factorial *= k;
-                    //        }
-                    //        parts2[f] = factorial.ToString();
-                    //        parts2[f] = Math.Sqrt(double.Parse(parts2[f])).ToString();
-                    //    }
-                    //}
+                    for (int f = 0; f < parts2.Length; f++)
+                    {
+                        if (parts2[f] != "" && parts2[f][parts2[f].Length - 1] == '!' && parts2[f][0] == '√')
+                        {
+                            parts2[f] = parts2[f].Remove(parts2[f].Length - 1, 1);
+                            parts2[f] = parts2[f].Remove(0, 1);
+                            parts2[f] = Math.Sqrt(double.Parse(parts2[f])).ToString();
+                            int factorial = 1;
+                            int num = int.Parse(parts2[f]);
+                            for (int k = 1; k <= num; k++)
+                            {
+                                factorial *= k;
+                            }
+                            parts2[f] = factorial.ToString();
+                        }
+                    }
 
                     //Факториал
                     for (int f = 0; f < parts2.Length; f++)

@@ -212,9 +212,7 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Операции над римскими числами" Background="#E5E4E4E4">
-                <Grid Background="#FFE5E5E5">
-                    <Label Content="Не успел :(" HorizontalAlignment="Left" Margin="133,64,0,0" VerticalAlignment="Top" FontSize="36"/>
-                </Grid>
+                <TextBox IsReadOnly="True" x:Name="TextBoxRome" HorizontalAlignment="Left" Height="50" Margin="55,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" FontSize="20" FontFamily="Arial" TextAlignment="Justify" AutomationProperties.HelpText="Введите выражение" Background="White"/>
             </TabItem>
             <TabItem Header="История" Background="#E5E4E4E4">
                 <Grid Background="#FFE5E5E5">
