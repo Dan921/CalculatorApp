@@ -183,7 +183,7 @@
                             </RadialGradientBrush>
                         </Button.Background>
                     </Button>
-                    <Label Content="Кол-во знаков полсе запятой: " HorizontalAlignment="Left" Margin="56,84,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label Content="Кол-во знаков после запятой: " HorizontalAlignment="Left" Margin="56,84,0,0" VerticalAlignment="Top" FontSize="16"/>
                     <ComboBox Name="ComboBox" Margin="297,87,60,367" SelectedIndex="2" FontSize="14">
                         <TextBlock>1</TextBlock>
                         <TextBlock>2</TextBlock>
