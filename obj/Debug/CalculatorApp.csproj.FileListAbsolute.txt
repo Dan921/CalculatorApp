@@ -1,7 +1,6 @@
 C:\Users\Kupry\source\repos\CalculatorApp\bin\Debug\CalculatorApp.exe.config
 C:\Users\Kupry\source\repos\CalculatorApp\bin\Debug\CalculatorApp.exe
 C:\Users\Kupry\source\repos\CalculatorApp\bin\Debug\CalculatorApp.pdb
-C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\CalculatorApp.csprojAssemblyReference.cache
 C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\MainWindow.g.cs
 C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\App.g.cs
 C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\CalculatorApp_MarkupCompile.cache

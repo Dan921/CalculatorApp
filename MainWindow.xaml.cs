@@ -32,7 +32,7 @@ namespace CalculatorApp
             TextBox1.Text += ((Button)sender).Content;
         }
 
-        private void ButtonClean_Click(object sender, RoutedEventArgs e)
+        private void ButtonClear_Click(object sender, RoutedEventArgs e)
         {
             TextBox1.Text = "";
         }
@@ -47,114 +47,7 @@ namespace CalculatorApp
         {
             try
             {
-                List<Char> signs1 = new List<char>();
-                string[] parts1 = TextBox1.Text.Split('+', '-');
-                for (int i = 0; i < TextBox1.Text.Length; i++)
-                {
-                    if (TextBox1.Text[i] == '+' || TextBox1.Text[i] == '-')
-                    {
-                        signs1.Add(TextBox1.Text[i]);
-                    }
-                }
-
-                for (int i = 0; i < parts1.Length; i++)
-                {
-                    string[] parts2 = parts1[i].Split('*', '/');
-                    List<Char> signs2 = new List<char>();
-                    for (int j = 0; j < parts1[i].Length; j++)
-                    {
-                        if (parts1[i][j] == '*' || parts1[i][j] == '/')
-                        {
-                            signs2.Add(parts1[i][j]);
-                        }
-                    }
-
-                    //Корень и факториал
-                    for (int f = 0; f < parts2.Length; f++)
-                    {
-                        if (parts2[f] != "" && parts2[f][parts2[f].Length - 1] == '!' && parts2[f][0] == '√')
-                        {
-                            parts2[f] = parts2[f].Remove(parts2[f].Length - 1, 1);
-                            parts2[f] = parts2[f].Remove(0, 1);
-                            parts2[f] = Math.Sqrt(double.Parse(parts2[f])).ToString();
-                            int factorial = 1;
-                            int num = int.Parse(parts2[f]);
-                            for (int k = 1; k <= num; k++)
-                            {
-                                factorial *= k;
-                            }
-                            parts2[f] = factorial.ToString();
-                        }
-                    }
-
-                    //Факториал
-                    for (int f = 0; f < parts2.Length; f++)
-                    {
-                        if (parts2[f] != "" && parts2[f][parts2[f].Length - 1] == '!')
-                        {
-                            double factorial = 1;
-                            int num = int.Parse(parts2[f].Remove(parts2[f].Length - 1, 1));
-                            for (int k = 1; k <= num; k++)
-                            {
-                                factorial *= k;
-                            }
-                            parts2[f] = factorial.ToString();
-                        }
-                    }
-
-                    //Корень
-                    for (int k = 0; k < parts2.Length; k++)
-                    {
-                        if (parts2[k] != "" && parts2[k][0] == '√')
-                        {
-                            parts2[k] = Math.Sqrt(double.Parse(parts2[k].Remove(0,1))).ToString();
-                        }
-                    }
-                    for (int j = 0; j < signs2.Count; j++)
-                    {
-                        if (signs2[j] == '*')
-                        {
-                            parts2[j + 1] = (double.Parse(parts2[j]) * double.Parse(parts2[j + 1])).ToString();
-                        }
-                        else
-                        {
-                            parts2[j + 1] = (double.Parse(parts2[j]) / double.Parse(parts2[j + 1])).ToString();
-                        }
-                    }
-                    parts1[i] = parts2[parts2.Length - 1];
-                }
-
-                if (TextBox1.Text[0] != '+' && TextBox1.Text[0] != '-')
-                {
-                    for (int i = 0; i < signs1.Count; i++)
-                    {
-                        if (signs1[i] == '+')
-                        {
-                            parts1[i + 1] = (double.Parse(parts1[i]) + double.Parse(parts1[i + 1])).ToString();
-                        }
-                        else
-                        {
-                            parts1[i + 1] = (double.Parse(parts1[i]) - double.Parse(parts1[i + 1])).ToString();
-                        }
-                    }
-                }
-                else
-                {
-                    parts1[1] = signs1[0] + parts1[1];
-                    for (int i = 1; i < signs1.Count; i++)
-                    {
-                        if (signs1[i] == '+')
-                        {
-                            parts1[i + 1] = (double.Parse(parts1[i]) + double.Parse(parts1[i + 1])).ToString();
-                        }
-                        else
-                        {
-                            parts1[i + 1] = (double.Parse(parts1[i]) - double.Parse(parts1[i + 1])).ToString();
-                        }
-                    }
-                }
-
-                string result = Math.Round(double.Parse(parts1[parts1.Length - 1]), int.Parse(ComboBox.Text)).ToString();
+                string result = ExpressionParser.calculate(TextBox1.Text, int.Parse(ComboBox.Text)).ToString();
 
                 File.AppendAllText(@"db/bestdb.txt", TextBox1.Text + " = " + result + "\n");
                 HistoryBox.Text = File.ReadAllText(@"db/bestdb.txt");
@@ -166,6 +59,40 @@ namespace CalculatorApp
             {
                 MessageBox.Show(exc.ToString());
             }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            TextBoxRome.Text += ((Button)sender).Content;
+        }
+
+        private void ButtonResultRome_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string result = RomanNumeralsConverter.convertNumberToRoman(ExpressionParser.calculate(RomanNumeralsConverter.convertExpression(TextBoxRome.Text), 0).ToString());
+
+                File.AppendAllText(@"db/bestdb.txt", TextBoxRome.Text + " = " + result + "\n");
+                HistoryBox.Text = File.ReadAllText(@"db/bestdb.txt");
+
+                TextBoxRome.Text = result;
+            }
+
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.ToString());
+            }
+        }
+
+        private void ButtonBackSpace_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (TextBoxRome.Text != "")
+                TextBoxRome.Text = TextBoxRome.Text.Remove(TextBoxRome.Text.Length - 1, 1);
+        }
+
+        private void ButtonClear_Click_2(object sender, RoutedEventArgs e)
+        {
+            TextBoxRome.Text = "";
         }
     }
 }
