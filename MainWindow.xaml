@@ -6,13 +6,7 @@
         xmlns:local="clr-namespace:CalculatorApp"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="Calculator" Height="570" Width="520">
-    <Window.Background>
-        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-            <GradientStop Color="Black"/>
-            <GradientStop Color="White" Offset="1"/>
-        </LinearGradientBrush>
-    </Window.Background>
+        Title="Calculator" Height="507" Width="388" Background="White">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -20,137 +14,26 @@
                 <GradientStop Color="#FF67FF88" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TabControl HorizontalAlignment="Left" Height="510" Margin="10,10,10,10" VerticalAlignment="Top" Width="480" Background="#CCEEEEEE">
-            <TabItem Header="Обычный калькулятор" Background="#E5E4E4E4">
+        <TabControl HorizontalAlignment="Left" Height="457" VerticalAlignment="Top" Width="360" Background="#B2EEEEEE" Margin="5,5,5,5">
+            <TabItem Header="Обычный калькулятор" Background="#E5FFFFFF">
                 <Grid>
-                    <TextBox IsReadOnly="True" Name="TextBox1" HorizontalAlignment="Left" Height="50" Margin="55,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" FontSize="20" FontFamily="Arial" TextAlignment="Justify" AutomationProperties.HelpText="Введите выражение" Background="White"/>
-                    <Button Content="Clear" HorizontalAlignment="Left" Margin="55,125,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="ButtonClear_Click">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="BS" HorizontalAlignment="Left" Margin="150,125,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="ButtonBackSpace_Click">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="=" HorizontalAlignment="Left" Margin="342,125,0,0" VerticalAlignment="Top" Width="73" Height="50" FontSize="24" FontFamily="Arial" Click="ButtonResult_Click">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="1" HorizontalAlignment="Left" Margin="55,191,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click" >
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="2" HorizontalAlignment="Left" Margin="150,191,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="3" HorizontalAlignment="Left" Margin="245,191,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="+" HorizontalAlignment="Left" Margin="340,191,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="4" HorizontalAlignment="Left" Margin="55,260,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="5" HorizontalAlignment="Left" Margin="150,260,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="6" HorizontalAlignment="Left" Margin="245,260,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="-" HorizontalAlignment="Left" Margin="340,260,0,0" VerticalAlignment="Top" Width="75" Height="50"  RenderTransformOrigin="0.948,0.469" FontSize="24" FontFamily="Arial" Click="Button_Click">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="7" HorizontalAlignment="Left" Margin="55,333,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="8" HorizontalAlignment="Left" Margin="150,333,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="9" HorizontalAlignment="Left" Margin="245,333,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="*" HorizontalAlignment="Left" Margin="340,333,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="!" HorizontalAlignment="Left" Margin="55,398,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click" RenderTransformOrigin="0.5,0.5">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
+                    <TextBox IsReadOnly="True" Name="TextBox1" HorizontalAlignment="Left" Height="50" Margin="20,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="315" FontSize="20" FontFamily="Arial" TextAlignment="Justify" AutomationProperties.HelpText="Введите выражение" Background="White"/>
+                    <Button Content="Clear" HorizontalAlignment="Left" Margin="20,125,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="ButtonClear_Click" Background="#7FFFFFFF"/>
+                    <Button Content="BS" HorizontalAlignment="Left" Margin="100,125,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="ButtonBackSpace_Click" Background="#7FFFFFFF"/>
+                    <Button Content="=" HorizontalAlignment="Left" Margin="260,125,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="ButtonResult_Click" Background="#7FFFFFFF"/>
+                    <Button Content="1" HorizontalAlignment="Left" Margin="20,180,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click" Background="#7FFFFFFF" />
+                    <Button Content="2" HorizontalAlignment="Left" Margin="100,180,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click" Background="#7FFFFFFF"/>
+                    <Button Content="3" HorizontalAlignment="Left" Margin="180,180,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click" Background="#7FFFFFFF"/>
+                    <Button Content="+" HorizontalAlignment="Left" Margin="260,180,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click" Background="#7FFFFFFF"/>
+                    <Button Content="4" HorizontalAlignment="Left" Margin="20,235,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click" Background="#7FFFFFFF"/>
+                    <Button Content="5" HorizontalAlignment="Left" Margin="100,235,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click" Background="#7FFFFFFF"/>
+                    <Button Content="6" HorizontalAlignment="Left" Margin="180,235,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click" Background="#7FFFFFFF"/>
+                    <Button Content="-" HorizontalAlignment="Left" Margin="260,235,0,0" VerticalAlignment="Top" Width="75" Height="50"  RenderTransformOrigin="0.948,0.469" FontSize="24" FontFamily="Arial" Click="Button_Click" Background="#7FFFFFFF"/>
+                    <Button Content="7" HorizontalAlignment="Left" Margin="20,290,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click" Background="#7FFFFFFF"/>
+                    <Button Content="8" HorizontalAlignment="Left" Margin="100,290,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click" Background="#7FFFFFFF"/>
+                    <Button Content="9" HorizontalAlignment="Left" Margin="180,290,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click" Background="#7FFFFFFF"/>
+                    <Button Content="*" HorizontalAlignment="Left" Margin="260,290,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click" Background="#7FFFFFFF"/>
+                    <Button Content="!" HorizontalAlignment="Left" Margin="20,345,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click" RenderTransformOrigin="0.5,0.5" Background="#7FFFFFFF">
                         <Button.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -160,32 +43,17 @@
                             </TransformGroup>
                         </Button.RenderTransform>
                     </Button>
-                    <Button Content="0" HorizontalAlignment="Left" Margin="150,398,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="," HorizontalAlignment="Left" Margin="245,398,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="/" HorizontalAlignment="Left" Margin="340,398,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Label Content="Кол-во знаков после запятой: " HorizontalAlignment="Left" Margin="56,84,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <ComboBox Name="ComboBox" Margin="297,87,60,367" SelectedIndex="2" FontSize="14">
+                    <Button Content="0" HorizontalAlignment="Left" Margin="100,345,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click" Background="#7FFFFFFF"/>
+                    <Button Content="," HorizontalAlignment="Left" Margin="180,345,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click" Background="#7FFFFFFF"/>
+                    <Button Content="/" HorizontalAlignment="Left" Margin="260,345,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click" Background="#7FFFFFFF"/>
+                    <Label Content="Кол-во знаков после запятой: " HorizontalAlignment="Left" Margin="20,85,0,0" VerticalAlignment="Top" FontSize="16" Width="235" Height="31"/>
+                    <ComboBox Name="ComboBox" Margin="260,89,19,293" SelectedIndex="2" FontSize="14">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#B2E5E5E5" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
                         <TextBlock>1</TextBlock>
                         <TextBlock>2</TextBlock>
                         <TextBlock>3</TextBlock>
@@ -202,137 +70,32 @@
                         <TextBlock>14</TextBlock>
                         <TextBlock>15</TextBlock>
                     </ComboBox>
-                    <Button Content="√" HorizontalAlignment="Left" Margin="245,125,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
+                    <Button Content="√" HorizontalAlignment="Left" Margin="180,125,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click" Background="#7FFFFFFF"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Операции над римскими числами" Background="#E5E4E4E4">
+            <TabItem Header="Операции над римскими числами" Background="#E5FFFFFF">
                 <Grid>
-                    <TextBox IsReadOnly="True" x:Name="TextBoxRome" HorizontalAlignment="Left" Height="50" Margin="55,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" FontSize="20" FontFamily="Arial" TextAlignment="Justify" AutomationProperties.HelpText="Введите выражение" Background="White"/>
-                    <Button Content="I" HorizontalAlignment="Left" Margin="55,147,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="V" HorizontalAlignment="Left" Margin="55,216,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="X" HorizontalAlignment="Left" Margin="149,216,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="L" HorizontalAlignment="Left" Margin="244,216,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="D" HorizontalAlignment="Left" Margin="149,288,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="C" HorizontalAlignment="Left" Margin="55,288,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="M" HorizontalAlignment="Left" Margin="244,288,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="+" HorizontalAlignment="Left" Margin="340,216,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="-" HorizontalAlignment="Left" Margin="340,288,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="/" HorizontalAlignment="Left" Margin="244,357,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="*" HorizontalAlignment="Left" Margin="149,357,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="=" HorizontalAlignment="Left" Margin="340,147,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="ButtonResultRome_Click">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="Clear" HorizontalAlignment="Left" Margin="149,147,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="ButtonClear_Click_2">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="BS" HorizontalAlignment="Left" Margin="244,147,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="ButtonBackSpace_Click_2">
-                        <Button.Background>
-                            <RadialGradientBrush GradientOrigin="0,0" Center="0,1" RadiusX="1" RadiusY="1">
-                                <GradientStop Color="#FFFEFFEF" Offset="0"/>
-                                <GradientStop Color="#FFC0FFE8" Offset="1"/>
-                            </RadialGradientBrush>
-                        </Button.Background>
-                    </Button>
+                    <TextBox IsReadOnly="True" x:Name="TextBoxRome" HorizontalAlignment="Left" Height="50" Margin="20,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="315" FontSize="20" FontFamily="Arial" TextAlignment="Justify" AutomationProperties.HelpText="Введите выражение" Background="White"/>
+                    <Button Content="I" HorizontalAlignment="Left" Margin="20,94,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2" Background="#7FFFFFFF"/>
+                    <Button Content="V" HorizontalAlignment="Left" Margin="20,149,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2" Background="#7FFFFFFF"/>
+                    <Button Content="X" HorizontalAlignment="Left" Margin="100,149,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2" Background="#7FFFFFFF"/>
+                    <Button Content="L" HorizontalAlignment="Left" Margin="180,149,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2" Background="#7FFFFFFF"/>
+                    <Button Content="D" HorizontalAlignment="Left" Margin="100,204,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2" Background="#7FFFFFFF"/>
+                    <Button Content="C" HorizontalAlignment="Left" Margin="20,204,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2" Background="#7FFFFFFF"/>
+                    <Button Content="M" HorizontalAlignment="Left" Margin="180,204,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2" Background="#7FFFFFFF"/>
+                    <Button Content="+" HorizontalAlignment="Left" Margin="260,149,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2" Background="#7FFFFFFF"/>
+                    <Button Content="-" HorizontalAlignment="Left" Margin="260,204,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2" Background="#7FFFFFFF"/>
+                    <Button Content="/" HorizontalAlignment="Left" Margin="180,259,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2" Background="#7FFFFFFF"/>
+                    <Button Content="*" HorizontalAlignment="Left" Margin="100,259,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="Button_Click_2" Background="#7FFFFFFF"/>
+                    <Button Content="=" HorizontalAlignment="Left" Margin="260,94,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="ButtonResultRome_Click" Background="#7FFFFFFF"/>
+                    <Button Content="Clear" HorizontalAlignment="Left" Margin="100,94,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="ButtonClear_Click_2" Background="#7FFFFFFF"/>
+                    <Button Content="BS" HorizontalAlignment="Left" Margin="180,94,0,0" VerticalAlignment="Top" Width="75" Height="50" FontSize="24" FontFamily="Arial" Click="ButtonBackSpace_Click_2" Background="#7FFFFFFF"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="История" Background="#E5E4E4E4">
-                <Grid Background="#FFE5E5E5">
-                    <TextBox Name="HistoryBox" HorizontalAlignment="Left" Height="462" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="454" ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                 ScrollViewer.VerticalScrollBarVisibility="Auto" IsReadOnly="True"/>
+            <TabItem Header="История" Background="#E5FFFFFF">
+                <Grid>
+                    <TextBox Name="HistoryBox" HorizontalAlignment="Left" Height="382" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="333" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto" IsReadOnly="True" Background="#B2FFFFFF"/>
                 </Grid>
             </TabItem>
         </TabControl>

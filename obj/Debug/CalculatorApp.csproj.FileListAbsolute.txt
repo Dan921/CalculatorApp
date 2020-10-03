@@ -12,3 +12,4 @@ C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\CalculatorApp.csproj.Generat
 C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\CalculatorApp.csproj.CoreCompileInputs.cache
 C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\CalculatorApp.exe
 C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\CalculatorApp.pdb
+C:\Users\Kupry\source\repos\CalculatorApp\obj\Debug\CalculatorApp.csprojAssemblyReference.cache
